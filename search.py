@@ -16,7 +16,8 @@ from evaluate import evaluate, evaluate_test, update_only_one_or_two, lora_weigh
 from multiprocessing import Pool
 from transformers import AutoModelForCausalLM, AutoTokenizer
 from datasets import load_dataset
-from trl import SFTConfig, SFTTrainer, DataCollatorForCompletionOnlyLM
+from trl import SFTTrainer
+from transformers import TrainingArguments as SFTConfig, DataCollatorForCompletionOnlyLM
 from peft import LoraConfig
 from safetensors.torch import load_file, save_file
 import torch
